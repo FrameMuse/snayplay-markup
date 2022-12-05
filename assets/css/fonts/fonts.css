@@ -1,0 +1,47 @@
+/* Regular */
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 400;
+    src: url(Montserrat-Regular.ttf) format('ttf');
+}
+
+/* Medium */
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 500;
+    src: url(Montserrat-Medium.ttf) format('ttf');
+}
+
+/* SemiBold */
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 600;
+    src: url(Montserrat-SemiBold.ttf) format('ttf');
+}
+
+/* BoldItalic */
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 700;
+    src: url(Montserrat-BoldItalic.ttf) format('ttf');
+}
+
+/* ExtraBoldItalic */
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 800;
+    src: url(Montserrat-ExtraBoldItalic.ttf) format('ttf');
+}
+
+/* BlackItalic */
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 900;
+    src: url(Montserrat-BlackItalic.ttf) format('ttf');
+}

@@ -1,0 +1,129 @@
+/* Mobile */
+
+@media screen and (max-width: 1200px) {
+    .page-section, .main-width, .game-section {
+        width: 1200px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        min-width: unset;
+    }
+    
+    header {
+        height: auto;
+    }
+    
+    .topbar__gift, .topbar__nav, .topbar2 {
+        display: none;
+    }
+    
+    .topbar {
+        padding: 35px;
+    }
+    
+    .page-section, .main-width, .game-section {
+        width: 100%;
+        max-width: unset;
+    }
+    
+    .composite__image {
+        width: 80%;
+        margin: 50px auto;
+    }
+    
+    .games-col, .kits-col {
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+        margin: 0 auto;
+    }
+    
+    .kits-col {
+        width: 100%;
+    }
+    
+    .kits-col__kit {
+        margin: 0;
+        margin-bottom: 25px;
+    }
+    
+    .pay-systems {
+        flex-wrap: wrap;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .pay-systems__item {
+        margin-bottom: 50px;
+    }
+    
+    .sub-info {
+        display: unset;
+        justify-content: center;
+        width: auto;
+    }
+
+    .sub-info__desc {
+        display: block;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .sub-info__soc-items {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer__to-top {
+        margin: 25px auto 0;
+    }
+
+    .copyright {
+        width: 95%;
+    }
+    
+    .page-section__desc {
+        width: 85%;
+        margin: 25px auto 50px;
+    }
+
+    .copyright > br, .page-section__desc > br {
+        display: none;
+    }
+    
+    .topbar__subs {
+        top: 0;
+        display: inline-flex;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+
+    .logo__name, .game-section__title, .game-board__old-price, .game-board__discount, .gift__words, .games-type__or {
+        font-size: 16px;
+    }
+
+    .nav__item, .flow__item, .subs__item, .games-load-more {
+        font-size: 14px;
+    }
+
+    .page-section__title {
+        font-size: 26px;
+    }
+
+    .games-type {
+        width: 265px;
+    }
+
+    .game-panel__row--0, .game-panel__row--1, .game-panel__title, .kits-col__price, .kits-col__title {
+        font-size: 18px;
+    }
+
+    .buy-button {}
+
+    .subs__count {
+        font-size: 22px;
+    }
+}

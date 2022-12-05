@@ -1,0 +1,388 @@
+@import "/engine/assets/css/fonts/Glyphicons.css";
+* {
+    margin: 0;
+    padding: 0;
+    transition: .3s ease;
+    box-sizing: border-box;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(-50px) scaleX(0);
+    }
+    100% {
+        transform: translateX(0px) scaleX(1);
+    }
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background: #f1f1f1;
+}
+
+a.fake {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+form.login {
+    display: inline-grid;
+    font-family: sans-serif;
+    position: absolute;
+    top: calc(50% - 160px);
+    left: calc(50% - 160px);
+    padding: 50px;
+    background: white;
+    box-shadow: 0 30px 80px -6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    text-align: center;
+}
+
+form.login h2 {
+    color: #333;
+    margin-bottom: 2em;
+}
+
+form.login input {
+    border: unset;
+    padding: 12px 20px;
+    margin: 5px 0;
+    font-size: 16px;
+    background: #fff;
+    border-radius: 40px;
+    border: 1px solid #ccc;
+    outline: none;
+    color: #333;
+}
+
+form.login input[type="submit"] {
+    color: #333;
+    background: #eaeaea;
+    cursor: pointer;
+}
+
+form.login input:hover {
+    box-shadow: 0 0 50px -20px black;
+}
+
+
+
+/* Menu-topbar */
+
+.menu-topbar {
+    padding: 25px;
+    max-height: 68px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: white;
+    box-shadow: 0 0 35px -14px black;
+}
+.menu-topbar a {
+    color: #333;
+    font-weight: bold;
+    font-size: 15px;
+    padding-left: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.menu-topbar a.active {
+    color: aqua;
+}
+
+
+/* Sidebar */
+
+.function-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 80px;
+}
+.function-sidebar .element {
+    padding: 13px 15px;
+    margin: 10px 15px;
+    height: 50px;
+    width: 50px;
+    background: #707070;
+    box-shadow: 0 0 15px -6px black;
+    border-radius: 100%;
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    position: relative;
+    font-family: "Glyphicons Halflings";
+    z-index: 9999;
+}
+.element::after {
+    content: attr(data-content-title);
+    position: absolute;
+    top: 10px;
+    left: 45px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    background: #707070;
+    border-radius: 0 4px 4px 0;
+    box-shadow: 5px 0 10px -5px rgba(0,0,0,0.4);
+    padding: 5px 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    transform: translateX(-50px) scaleX(0);
+}
+
+.element:hover::after {
+    animation: move .2s ease;
+    transform: translateX(0px) scaleX(1);
+}
+
+.function-sidebar .element.main {
+    margin: 4em 15px;
+}
+.function-sidebar .account:before {
+    content: "\e008";
+}
+.function-sidebar .list:before {
+    content: "\e012";"
+}
+.function-sidebar .kits:before {
+    content: "\e137";
+}
+.function-sidebar .stats:before {
+    content: "\e018";
+}
+.function-sidebar .star:before {
+    content: "\e006";
+}
+.function-sidebar .cog:before {
+    content: "\e019";
+}
+.function-sidebar .wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 0 35px -14px black;
+}
+
+
+
+
+
+
+
+
+.container.function {
+    margin-left: 80px;
+    padding: 2em;
+}
+
+table {
+    margin: 0 auto;
+    width: 1000px;
+    padding: 10px;
+    background: white;
+}
+
+table tr {
+    font-size: 16px;
+    padding: 10px;
+    background: none;
+    text-align: center;
+}
+.drag {
+    cursor: move;
+}
+.drag:hover {
+    transform: scale(0.96);
+}
+.drag.over {
+    outline: 2px dashed #909090;
+}
+
+table tr td {
+    padding: inherit;
+    position: relative;
+}
+table tr td.img {
+    height: 50px;
+    width: 70px;
+    padding: 0;
+}
+table tr td.img img {
+    width: inherit;
+    height: inherit;
+}
+#underline {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+.top {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.top h1 {
+    padding: 20px 30px;
+    background: white;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 -5px 10px -5px rgba(0,0,0,0.05);
+}
+
+.top .menu nav {
+    display: flex;
+    padding: 15px;
+    border-radius: 0 0 10px 10px;
+    background: rgba(255,255,255,0.6);
+}
+
+.top .menu nav a {
+    padding: 10px 15px;
+    margin-right: 20px;
+    color: #333;
+    background: white;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    box-shadow: 0 0 10px -2px rgba(0,0,0,0.1);
+}
+
+.top .menu nav a:hover {
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+}
+
+.top .menu nav a.active {
+    border-color: #e8a85e;
+    background: #f4b66c;
+    box-shadow: 0 0 10px -2px rgba(0,0,0,0.1);
+    color: white;
+}
+
+.bottom.separate {
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.section {
+    display: inline-grid;
+    padding-bottom: 20px;
+    width: 30%;
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px -10px rgba(0,0,0,0.4);
+}
+
+.section h2 {
+    font-size: 20px;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    border-bottom: 1.5px solid #ff9f2e;
+}
+
+.option-line {
+    padding: 10px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+.option-line input, .option-line select {
+    padding: 8px 15px;
+    color: #333;
+    background: white;
+    font-size: inherit;
+    width: 65%;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+}
+.option-line select {
+    border: 1px solid #999;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    appearance:none;
+    cursor: pointer;
+}
+
+.option-line input:focus, .option-line select:focus {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+
+.option-line label {
+    font-size: inherit;
+    margin-right: 20px;
+}
+
+.option-line.small {padding: 5px 25px;}
+
+.option-line.small input, .option-line.small select {
+    padding: 5px 10px;
+}
+            
+.option-line.small label {
+    color: #666;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+textarea {
+    padding: 20px;
+    border: unset;
+    color: #333;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    width: 100%;
+}
+
+.right {
+    position: sticky;
+    top: 50px;
+    height: 100%;
+}
+#cost_old {
+    text-decoration: line-through;
+}
+span.type {
+    margin: 0;
+    margin-right: 5px;
+}
+
+
+
+#results {
+    align-items: center;
+    display: flex;
+}
+
+.loader {
+    height: 25px;
+    margin-right: 10px;
+}
